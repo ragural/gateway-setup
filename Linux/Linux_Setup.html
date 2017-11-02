@@ -1,102 +1,80 @@
-<div class="row wrapper border-bottom white-bg page-heading">
-    <div class="col-lg-10">
-        <h2>Setup Development Environment with the Intel&reg; NUC</h2>
-        <ol class="breadcrumb">
-            <li>
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a>Labs</a>
-            </li>
-            <li class="active">
-                <strong>Setup Development Environment with the Intel&reg; NUC</strong>
-            </li>
-        </ol>
-    </div>
-</div>
-
-<div class="wrapper wrapper-content">
-    <div class="row">
-        <div class="col-lg-12">
-
-            <!-- Overview of Labs: What are we doing and where are we going?
-            <div ibox title="Lab Overview and Objectives">
-              <div content-block name="read-objectives" message="Read the Lab Overview and Objectives">
-                <h2 class="labHidden">Lab Overview and Objectives</h2>
-
-                <labels linux/>
-                <p>The labs in the Intel Visual Retail Workshop are organized in a progression that will result in each attendee building their own automated and secured, multi-device IoT network supporting Visual Retail scenarios.</p>
-                <p>Start by making sure your computer, is ready for Visual Retail development.</p>
-                <p>By the end of this module, you should be able to:</p>
-
-                <div class="alert alert-info">
-                  <ul>
-                    <li>Unbox and setup your Intel&reg; NUC Hardware</li>
-                    <li>Connect to your Intel&reg; NUC to power and monitor.</li>
-                    <li>Install Ubuntu 16.04 from <a href="http://releases.ubuntu.com/16.04/">http://releases.ubuntu.com/16.04/</a></li>
-                    <li>Install Media Server Studio</li>
-                    <li>Install OpenCV with Python support</li>
-                    <li>Copy the required lab exercises</li>
-                  </ul>
-                </div>
-              </div>
-            </div> -->
-
-            <!-- Login to your Intel NUC -->
-            <div ibox title="Setup and deployment">
-                <div content-block name="sw-install" message="Software installations">
-
-                  <p><b>Hardware Requirements</b></p>
-                  <p>5th Generation Core Processor</p>
-                </br>
-                  <p><b>Software Requirements</b></p>
-                  <p>Open network is recommended while running the Media Server Studio & OpenCV installations as corporte proxy blocks downloading certain files.</p>
-                 <ul>
-                    <li>Install Ubuntu 16.04 by downloading 64-bit ISO from <a href="http://old-releases.ubuntu.com/releases/16.04.1/ubuntu-16.04-desktop-amd64.iso">http://old-releases.ubuntu.com/releases/16.04.1/ubuntu-16.04-desktop-amd64.iso</a></li>
-                    <li>Note: While installing, select the option "install Ubuntu alongside with Windows"</li>
-                  </br><div class="alert alert-warning"><p>Set name: intel</p>
-                      <p>computer name: intel&lt;NUC Number&gt;</p>
-                      <p>Username: intel</p>
-                      <p>Password: intel123</p></div>
-                  </br>
-                    <li>Install CVSDK, which will internally install Media Server studio also.
-                    <p>Link: <a href = "\\10.224.54.1\Raghavendra\VAinstallerSept24_2.tgz">\\10.224.54.1\Raghavendra\VAinstallerSept24_2.tgz</a></p>
-                    <p>Note: Use Ctrl+Alt+F1 to switch to one of the classic UNIX terminals and install the above SDK. It won't install properly in GUI based terminal.</p>
-                    <p>Run the command: <div class="alert alert-warning">$sudo python VAinstaller.py --SDK CVSDK</div></p>
-                        <p>Note:- If it asks for any overwriting during installation, say 'y' - yes to confirm</p>
-                        <p>Run the command: <div class="alert alert-warning">$./setupvars.sh from VAinstallerSept24 directory</div></p>
-                    <p>Reboot the system</p>
-                    <li>Copy the opencv setup zip file and the below opencv install script from <a href="\\10.224.54.1\Raghavendra\OpenCV">\\10.224.54.1\Raghavendra\OpenCV</a> to downloads directory</li>
-                    <li>Install OpenCV by running the
-                        <div class="alert alert-warning">
-                          <p>$cd '/home/intel&lt;NUC Number&gt;/Downloads/OpenCV/</p>
-                          <p>$bash install-opencv.sh</div>
-                    </li>
-                    <li>Copy the <a href="../views/labs/downloads/workshop.zip">workshop zip file </a>or from <a href="\\10.224.54.1\Raghavendra\Workshop.zip">\\10.224.54.1\Raghavendra\Workshop.zip</a> to /home/Documents/ and unzip it</li>
-
-</br>
-<p><b>Verification and Validation</b></p>
-                <p>1. Run python <div class="alert alert-warning">$idle </div>from terminal. Type: import cv2</p>
-                <p>2. It should not give any error.</p>
-                <p>3. Type: print cv2.__version__ </p>
-                <p>4. It should display the cv2 version </p>
-		     <p>5. Execute $vainfo and check if there are no errors </p>
-		     <p>6. Execute </p>
-<div class="alert alert-warning"><p>$cd /opt/intel/mediasdk/samples/_bin/x64</p>
-                <p>$./sample_decode h264 -i ../content/test_stream.264 -hw -vaapi -r</p></div>
-		     <p>This should run a video and show the usage of hw and vaapi for decoding frames in terminal.
-                <p>5. Shutdown the system, unplug the cables and stick Intel logo provided in the box, on to the NUC and pack the box.</p>
-
-</div>
-
-            <!-- Lab Conclusion -->
-            <div ibox title="Lab Conclusion">
-                <div content-block name="Windows-SSH" message="Read about the next lab">
-                    <h2 class="labHidden">Read about the next lab</h2>
-                    <p>Congratulations! You have successfully setup your Intel&reg; NUC with Ubuntu for Visual Retail workshop.
-                      In the next section, you will learn how to enhance the video performance using Intel software.</p>
-                </div>
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapse">
+        <ul side-navigation class="nav metismenu" id="side-menu">
+          <li class="nav-header">
+            <span class="clear">
+                <img src="/img/intel_logo.png"/><br />Linux version
+            </span>
+            <div class="logo-element">
+              Intel
             </div>
-          </div>
+            </li>
+            <li ui-sref-active="active">
+                <a ui-sref="index.home"><i class="fa fa-th-large"></i> <span class="nav-label">Home</span> </a>
+            </li>
+            <li>
+                <a ui-sref="index.schedule"><i class="fa fa-calendar"></i> <span class="nav-label">Schedule</span></a>
+            </li>
+            <li>
+                <a ui-sref="index.presentations"><i class="fa fa-slideshare"></i> <span class="nav-label">Presentations</span></a>
+            </li>
+
+          <!--  <li>
+                <a ui-sref="index.videos"><i class="fa fa-desktop"></i> <span class="nav-label">Videos</span></a>
+            </li> -->
+
+            <li ng-class="{active: $state.includes('labs')}">
+                <a href=""><i class="fa fa-flask"></i> <span class="nav-label">Labs</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level collapse" ng-class="{in: $state.includes('labs')}">
+
+                    <li ng-class="{active: $state.includes('labs')}">
+                        <a href=""><span class="nav-label"><a ui-sref="labs.setup-development-environment">Installation Instructions</span> <span class="fa arrow"></span></a>
+                  </li>
+                    <li ng-class="{active: $state.includes('labs')}">
+                        <a href=""><span class="nav-label">Video Performance</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level collapse" ng-class="{in: $state.includes('labs')}">
+                          <li ui-sref-active="active"><a ui-sref="labs.videoperformance-mediasdk">Explore Intel &reg; Media Server Studio Samples</a></li>
+                            <li ui-sref-active="active"><a ui-sref="labs.videoperformance-mediasdksamples">Build Video Decode app using Intel &reg; Media Server Studio Samples</a></li>
+                              <li ui-sref-active="active"><a ui-sref="labs.videoperformance-marsunderstand">Intel &reg; Media Server Studio with FFMPEG</a></li>
+                        </ul>
+                    </li>
+
+                    <li ng-class="{active: $state.includes('labs')}">
+                        <a href=""> <span class="nav-label">Remote Management</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level collapse" ng-class="{in: $state.includes('labs')}">
+                            <li ui-sref-active="active"><a ui-sref="labs.remote-configamt">Configure AMT</a></li>
+                            <li ui-sref-active="active"><a ui-sref="labs.remote-configintelmc">Manage remote systems</a></li>
+                            <li ui-sref-active="active"><a ui-sref="labs.remote-configmeshcentral">Manage remote systems using opensource cloud</a></li>
+                        </ul>
+                    </li>
+                    <li ng-class="{active: $state.includes('labs')}">
+                        <a href=""> <span class="nav-label">Video Analytics</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level collapse" ng-class="{in: $state.includes('labs')}">
+                            <li ui-sref-active="active"><a ui-sref="labs.analytics-opencvinit">A Simple video capture using OpenCV</a></li>
+                            <li ui-sref-active="active"><a ui-sref="labs.analytics-opencvmotion">Motion detection using OpenCV</a></li>
+                            <li ui-sref-active="active"><a ui-sref="labs.analytics-opencvface">Face detection with OpenCV</a></li>
+                            <li ui-sref-active="active"><a ui-sref="labs.analytics-analyse">Analyse face data</a></li>
+                        </ul>
+                    </li>
+                    <!--
+                    <li ng-class="{active: $state.includes('labs')}">
+                        <a href=""> <span class="nav-label">Additional Information</span> <span class="fa arrow"></span></a>
+                        <ul class="nav nav-third-level collapse" ng-class="{in: $state.includes('labs')}">
+                            <li ui-sref-active="active"><a ui-sref="labs.additional-info-vaapi">Video performance through VA-API on Linux</a></li>
+                            <li ui-sref-active="active"><a ui-sref="labs.additional-info-remote_linux">Managing Linux systems with Intel&reg; AMT and Mesh Central</a></li>
+                        </ul>
+                    </li>
+                    -->
+                </ul>
+            </li>
+            <!--
+            <li>
+                <li ui-sref-active="active"><a ui-sref="labs.solutions"><i class="fa fa-github"></i> <span class="nav-label">Solutions</span></a></li>
+            </li>
+
+            <li ui-sref-active="active"><a ui-sref="index.faq">FAQ</a></li>
+            -->
+        </ul>
+
     </div>
-</div>
+</nav>
