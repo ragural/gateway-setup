@@ -62,10 +62,16 @@
                     <li>Install CVSDK, which will internally install Media Server studio also.
                     <p>Link: <a href = "\\10.224.54.1\Raghavendra\VAinstallerSept24_2.tgz">\\10.224.54.1\Raghavendra\VAinstallerSept24_2.tgz</a></p>
                     <p>Note: Use Ctrl+Alt+F1 to switch to one of the classic UNIX terminals and install the above SDK. It won't install properly in GUI based terminal.</p>
-                    <p>Run the command: <div class="alert alert-warning">$sudo python VAinstaller.py --SDK CVSDK</div></p>
+                  </li>
+                  <li>Run the command: <div class="alert alert-warning">$sudo python VAinstaller.py --SDK CVSDK</div>
                         <p>Note:- If it asks for any overwriting during installation, say 'y' - yes to confirm</p>
-                        <p>Run the command: <div class="alert alert-warning">$./setupvars.sh from VAinstallerSept24 directory</div></p>
-                    <p>Reboot the system</p>
+                      </li>
+                      <li>Run the command: <div class="alert alert-warning">$./setupvars.sh from VAinstallerSept24 directory</div>
+                      </li>
+                    <li>Reboot the system</li>
+                    <li>Execute the following command from the terminal
+                      <div class="alert alert-warning">echo 'export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/lib64/pkgconfig"' >> ~/.bashrc</div>
+                    </li>
                     <li>Download opencv installation script from <a href="\\10.224.54.1\Raghavendra\OpenCV">\\10.224.54.1\Raghavendra\OpenCV</a> to downloads directory</li>
                     <li>Install OpenCV by running the
                         <div class="alert alert-warning">
@@ -76,11 +82,12 @@
 
 </br>
 <p><b>Verification and Validation</b></p>
-                <p>1. Run python <div class="alert alert-warning">$idle </div>from terminal. Type: import cv2</p>
+                <p>1. From the terminal Run python and test OpenCV <div class="alert alert-warning"><p>$idle</p><p>$import cv2</p></div></p>
                 <p>2. It should not give any error.</p>
                 <p>3. Type: print cv2.__version__ </p>
                 <p>4. It should display the cv2 version </p>
-		     <p>5. Execute $vainfo and check if there are no errors </p>
+		     <p>5. Execute the following command and verify there are no errors:
+         <div class="alert alert-warning">$vainfo</div></p>
 		     <p>6. Execute </p>
 <div class="alert alert-warning"><p>$cd /opt/intel/mediasdk/samples/_bin/x64</p>
                 <p>$./sample_decode h264 -i ../content/test_stream.264 -hw -vaapi -r</p></div>
