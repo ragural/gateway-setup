@@ -65,6 +65,9 @@
                       <p>Username: intel</p>
                       <p>Password: intel123</p></div>
                   </br>
+                  <li>Update the Ubuntu packages:
+                    <div class="alert alert-warning">$sudo apt-get update</div>
+                    <p>Note: Troubleshoot for core dump error on update- $sudo apt-get purge libappstream3</p>
                     <li>Install CVSDK, which will internally install Media Server studio also.
                     <p>Link: <a href = "\\10.224.54.1\Raghavendra\workshop-setup\VAinstallerSept24_2.tgz">\\10.224.54.1\Raghavendra\workshop-setup\VAinstallerSept24_2.tgz</a></p>
                     <li>Copy the VAinstallerSept24_2.tgz to Documents folder and unzip the contents</li>
@@ -75,9 +78,10 @@
                   <li>Run the command: <div class="alert alert-warning">$sudo python VAinstaller.py --SDK CVSDK</div>
                         <p>Note:- If it asks for any overwriting during installation, say 'y' - yes to confirm</p>
                       </li>
-                      <li>Run the command: <div class="alert alert-warning">$./setupvars.sh from VAinstallerSept24 directory</div>
+                      <li>Run the following command from VAinstallerSept24 directory: <div class="alert alert-warning">$./setupvars.sh </div>
                       </li>
-                    <li>Reboot the system</li>
+                    <li>Reboot the system by issuing the following command:
+                    <div class="alert alert-warning">$reboot </div></li>
                     <li>Execute the following command from the terminal
                       <div class="alert alert-warning">echo 'export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/usr/lib64/pkgconfig"' >> ~/.bashrc</div>
                     </li>
