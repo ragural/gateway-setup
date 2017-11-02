@@ -52,15 +52,13 @@
                   <p><b>Software Requirements</b></p>
                   <p>Open network is recommended while running the Media Server Studio & OpenCV installations as corporte proxy blocks downloading certain files.</p>
                  <ul>
-                    <li>Install Ubuntu 16.04 by downloading 64-bit ISO from any one of the following links:
-                      <ol>
-                        <li>
+                    <li>Install Ubuntu 16.04 by downloading 64-bit ISO from the following link:
+
+                        <!--<li>
                           <a href="http://old-releases.ubuntu.com/releases/16.04.1/ubuntu-16.04-desktop-amd64.iso">http://old-releases.ubuntu.com/releases/16.04.1/ubuntu-16.04-desktop-amd64.iso</a>
-                        </li>
+                        </li> -->
                           <a href="http://old-releases.ubuntu.com/releases/16.04.1/ubuntu-16.04-desktop-amd64.iso">\\10.224.54.1\Raghavendra\ubuntu-16.04-desktop-amd64.iso</a>
-                        <li>
-                        </li>
-                      </ol>
+                      </li>
                     <li>Note: While installing, select the option "install Ubuntu alongside with Windows"</li>
                   </br><div class="alert alert-warning"><p>Set name: intel</p>
                       <p>computer name: intel&lt;NUC Number&gt;</p>
@@ -69,8 +67,11 @@
                   </br>
                     <li>Install CVSDK, which will internally install Media Server studio also.
                     <p>Link: <a href = "\\10.224.54.1\Raghavendra\VAinstallerSept24_2.tgz">\\10.224.54.1\Raghavendra\VAinstallerSept24_2.tgz</a></p>
-                    <p>Note: Use Ctrl+Alt+F1 to switch to one of the classic UNIX terminals and install the above SDK. It won't install properly in GUI based terminal.</p>
+                    <li>Copy the VAinstallerSept24_2.tgz to Documents folder and unzip the contents</li>
+                    <p>Note: Use Ctrl+Alt+F1 to switch to one of the classic UNIX terminals and install the above SDK.
+                      It won't install properly in GUI based terminal. If you wan't to come back to GUI, press Ctrl+Alt+F7</p>
                   </li>
+                  <li>Provide your credentials given during installation</li>
                   <li>Run the command: <div class="alert alert-warning">$sudo python VAinstaller.py --SDK CVSDK</div>
                         <p>Note:- If it asks for any overwriting during installation, say 'y' - yes to confirm</p>
                       </li>
